@@ -1,0 +1,692 @@
+:root{
+  --gold: #E3AC3B;
+  --gold-dark: #C8932A;
+  --ink: #15130F;
+  --black: #4A4335;
+  --deepblack:#000000;
+  --cream: #F5EFE4;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans Flex", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.hero-section{
+    display: grid;
+    grid-template-rows: 1fr;   /* rows, not columns */
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.3)
+    ), url(images/businesswoman-consulting-legal-experts.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 0 5rem;
+    color: white;                        /* fixes the black hero text */
+}
+
+nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem; 
+    background: transparent;
+    transition: background 0.5s ease, padding 0.5s ease;
+}
+menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Google Sans Flex", sans-serif;
+}
+.menu-btn{
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Google Sans Flex", sans-serif;
+    display: flex;
+    padding: .5rem 1rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    background: var(--gold);
+}
+.menu-btn i{
+    color: var(--black);
+}
+.menu-btn:hover{
+    background: var(--cream);
+    transition: background 0.5s ease;
+}
+
+nav.scrolled{
+    background: var(--ink);
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Google Sans Flex", sans-serif;
+}
+
+.nav-right{
+    display: none;                       /* hidden until the menu is clicked */
+    position: absolute;
+    top: 100%;
+    right: 5rem;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.85);
+    transition: all 0.8s ease;
+    padding: 1rem 2rem;
+    height: auto;
+}
+.nav-right.show{
+    display: flex;
+}
+
+.fa-bars{
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hero-words{
+    align-self: center;
+    padding-top: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.hero-title{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+.hero-description{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+span{
+    color: var(--gold);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.buttons{
+    padding-bottom: 3rem;
+    display: flex;
+    gap: 1rem;
+}
+#buttons{
+    justify-content: center;
+    padding-top: 3.25rem;
+}
+#buttons .btn-secondary{
+    background: var(--black);
+
+}
+#buttons .btn-secondary:hover{
+    background: var(--gold);
+    transition: background 0.8s ease;
+
+}
+button{
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: .8rem;
+    letter-spacing: 0.1rem;
+}
+.btn-primary{
+    background: var(--gold);
+    color: var(--ink);
+}
+.btn-secondary{
+    background: var(--ink);
+    color: var(--white);
+}
+.btn-primary:hover{
+    background: var(--cream);
+    transition: background 0.8s ease;
+}
+.btn-secondary:hover{
+    background: var(--gold);
+    transition: background 0.8s ease;
+}
+/* ---------- Organizations / audience section ---------- */
+:root{
+  --card: #1E1B16;
+}
+
+.organizations{
+    background: var(--ink);
+    color: var(--white);
+    padding: 5rem 5rem 6rem;
+    text-align: center;
+}
+
+.trusted-label{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* logos with thin dividers between them */
+.logo-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+.logo-row img{
+    height: 56px;
+    width: auto;
+    padding: 0 2.5rem;
+}
+.logo-row img + img{
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.logo-row .logo-wide{
+    height: 64px;           /* wide logo with small text needs a bit more height */
+}
+
+/* heading + intro */
+.audience{
+    max-width: 52rem;
+    margin: 7rem auto 0;
+}
+.audience h2{
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+.audience p{
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* cards */
+.cards{
+    max-width: 72rem;
+    margin: 5rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    text-align: left;
+}
+.card{
+    background: var(--card);
+    color: var(--white);
+    padding: 3rem 2.5rem;
+    /* border-radius: 0.5rem; */
+    transition: background 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+.card i{
+    font-size: 2rem;
+}
+.card h3{
+    margin-top: 3.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.card p{
+    margin-top: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* highlighted card: gold with dark text for contrast */
+.card-featured,
+.card:hover{
+    background: var(--gold);
+    color: var(--ink);
+}
+.card-featured p,
+.card:hover p{
+    color: rgba(21, 19, 15, 0.8);
+}
+.card:hover{
+    transform: translateY(-6px);
+}
+/* when you hover a different card, the featured one returns to dark */
+.cards:hover .card-featured:not(:hover){
+    background: var(--card);
+    color: var(--white);
+}
+.cards:hover .card-featured:not(:hover) p{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* responsive */
+@media (max-width: 900px){
+    .organizations{ padding: 4rem 1.5rem; }
+    .cards{ grid-template-columns: 1fr; }
+    .logo-row{ gap: 2rem; }
+    .logo-row img{ padding: 0; height: 48px; }
+    .logo-row .logo-wide{ height: 56px; }
+    .logo-row img + img{ border-left: none; }
+}
+/* ---------- Journey / accordion section ---------- */
+.journey{
+    background: var(--white);
+    color: var(--ink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+    padding: 6rem 5rem;
+}
+
+.journey-image img{
+    width: 100%;
+    height: 100%;
+    min-height: 680px;
+    max-height: 800px;
+    object-fit: cover;
+    display: block;
+    /* border-radius: 0.25rem; */
+}
+
+.journey-label{
+    color: var(--gold-dark);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.journey-words h2{
+    margin-top: 1.5rem;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+/* button */
+.journey-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background: var(--ink);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.journey-btn:hover{
+    background: var(--gold);
+    color: var(--ink);
+}
+
+/* accordion */
+.accordion{
+    margin-top: 4.5rem;
+    border-top: 1px solid rgba(21, 19, 15, 0.15);
+}
+.acc-item{
+    border-bottom: 1px solid rgba(21, 19, 15, 0.15);
+}
+.acc-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: rgba(21, 19, 15, 0.45);     /* closed items are muted */
+    transition: color 0.4s ease;
+}
+.acc-header:hover{
+    color: var(--ink);
+}
+.acc-header i{
+    font-size: 1rem;
+    transition: transform 0.4s ease;
+}
+
+/* smooth open/close using the grid-rows trick */
+.acc-body{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease;
+}
+.acc-body p{
+    overflow: hidden;
+    max-width: 34rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(21, 19, 15, 0.8);
+}
+
+/* open state */
+.acc-item.open .acc-header{
+    color: var(--ink);
+    padding-bottom: 1rem;
+}
+.acc-item.open .acc-header i{
+    transform: rotate(180deg);
+}
+.acc-item.open .acc-body{
+    grid-template-rows: 1fr;
+}
+.acc-item.open .acc-body p{
+    padding-bottom: 2rem;
+}
+
+/* responsive */
+@media (max-width: 900px){
+    .journey{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 4rem 1.5rem;
+    }
+    .journey-image img{ min-height: 360px; }
+    .acc-header{ font-size: 1.4rem; }
+}
+/* ---------- Vision, Mission & Values ---------- */
+.values{
+    background: var(--deepblack);
+    color: var(--white);
+    padding: 5rem 5rem 6rem;
+    text-align: center;
+}
+
+/* small gold label*/
+.values-label{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--gold);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+.values h2{
+    max-width: 48rem;
+    margin: 1.25rem auto 0;
+    font-size: clamp(2rem, 4.5vw, 3.6rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.values-intro{
+    max-width: 44rem;
+    margin: 1.5rem auto 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* 4-column panel: the 1px gaps show the container colour as dividers */
+.values-grid{
+    max-width: 72rem;
+    margin: 3.5rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.value{
+    background: var(--deepblack);
+    padding: 3rem 2rem;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.value-num{
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--gold);
+    transition: color 0.5s ease;
+}
+
+.value h3{
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.value p{
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.65);
+    transition: color 0.5s ease;
+}
+
+/* highlighted card: gold with dark text */
+.value.featured,
+.value:hover{
+    background: var(--gold);
+    color: var(--ink);
+}
+.value.featured .value-num,
+.value:hover .value-num{
+    color: rgba(21, 19, 15, 0.55);
+}
+.value.featured p,
+.value:hover p{
+    color: rgba(21, 19, 15, 0.85);
+}
+
+/* when hovering another card, the first one goes back to black */
+.values-grid:hover .value.featured:not(:hover){
+    background: var(--deepblack);
+    color: var(--white);
+}
+.values-grid:hover .value.featured:not(:hover) .value-num{
+    color: var(--gold);
+}
+.values-grid:hover .value.featured:not(:hover) p{
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* responsive */
+@media (max-width: 1000px){
+    .values{ padding: 4rem 1.5rem; }
+    .values-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px){
+    .values-grid{ grid-template-columns: 1fr; }
+}
+/* ---------- Full-screen image ---------- */
+.full-image{
+    width: 100%;
+    height: 60vh;
+    height: 60svh;          /* fits mobile browsers with a collapsing address bar */
+    overflow: hidden;
+}
+.full-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* fills the screen without stretching, cropping the edges if needed */
+    object-position: center;
+    display: block;          /* removes the small gap that appears under inline images */
+}
+  @media (max-width: 900px){
+      .full-image img{ object-position: 40% center; }
+  }
+
+/* services section */
+/* services section */
+/* .services{
+    background: var(--white);
+    color: var(--ink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+    padding: 6rem 5rem;
+} */
+/* ---------- Services: sticky left, scrolling right ---------- */
+/* ---------- Services: sticky left, scrolling right (white) ---------- */
+.services{
+    display: block;
+    width: 100%;
+    background: var(--white);
+    color: var(--ink);
+    padding: 6rem 5rem;
+}
+
+.services-inner{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 5rem;
+    align-items: start;          /* required, or the left column stretches and can't stick */
+    width: min(76rem, 100%);
+    margin-inline: auto;
+}
+
+/* LEFT: sticks below the fixed nav while the right side scrolls */
+.services-left{
+    position: sticky;
+    top: 7rem;
+}
+
+.services-label{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--gold-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+.services-label::before{
+    content: "";
+    width: 1.8rem;
+    height: 1px;
+    background: var(--gold-dark);
+}
+
+.services-left h2{
+    margin-top: 1.25rem;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.services-intro{
+    margin-top: 1.5rem;
+    max-width: 28rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(21, 19, 15, 0.7);
+}
+
+.services-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding: 1.1rem 1.5rem;
+    background: var(--ink);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.services-btn:hover{
+    background: var(--gold);
+    color: var(--ink);
+}
+
+/* RIGHT: the list */
+.services-right{
+    border-top: 1px solid rgba(21, 19, 15, 0.15);
+}
+
+.service{
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(21, 19, 15, 0.15);
+    transition: padding-left 0.4s ease;
+}
+.service:hover{
+    padding-left: 1rem;
+}
+
+.service-num{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--gold-dark);
+}
+
+.service h3{
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: color 0.4s ease;
+}
+.service:hover h3{
+    color: var(--gold-dark);
+}
+
+.service p{
+    margin-top: 0.75rem;
+    max-width: 32rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(21, 19, 15, 0.65);
+}
+
+/* responsive: stack on tablet/mobile, no sticky */
+@media (max-width: 900px){
+    .services{ padding: 4rem 1.5rem; }
+    .services-inner{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .services-left{
+        position: static;
+    }
+    .service{ grid-template-columns: 3rem 1fr; padding: 1.75rem 0; }
+    .service h3{ font-size: 1.4rem; }
+}
