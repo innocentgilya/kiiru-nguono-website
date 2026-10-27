@@ -214,3 +214,17 @@ nav.scrolled, body.subpage nav{ background:var(--ink); }
     .form-row, .footer-grid{ grid-template-columns:1fr; }
     .contact-form{ padding:2rem 1.25rem; }
 }
+.brand img{
+    height: 72px;
+    width: auto;
+    display: block;
+}
+.hero-logo{
+    height: clamp(90px, 14vw, 150px);
+    width: auto;
+    align-self: flex-start;      /* stops the flex column stretching it */
+    margin-bottom: 1rem;
+}
+@media (max-width:1180px){
+    .brand img{ height: 42px; }
+}

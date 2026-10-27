@@ -13,7 +13,7 @@ const navHost = document.getElementById("site-nav");
 if (navHost) {
   navHost.outerHTML = `
   <nav>
-    <a href="index.html" class="brand">KIIRU &amp; NGUONO ADVOCATES</a>
+    <a href="index.html" class="brand"><img src="images/logo-white.svg" alt="Kiiru &amp; Nguono Co. Advocates"></a>
     <div class="nav-right" id="menu">
       ${links.map(([t, h]) => `<a href="${h}" class="${h === page ? "active" : ""}">${t}</a>`).join("")}
       <a href="index.html#contact" class="nav-cta">Contact Us</a>
